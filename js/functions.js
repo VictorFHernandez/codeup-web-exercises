@@ -12,6 +12,8 @@ function sayHello(name){
     return "Hello " + name
 }
 
+console.log(sayHello("Victor"))
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -30,9 +32,8 @@ var HelloMessage = sayHello("Victor");
  */
 
 var myName = "victor"
-sayHello("myName");
 
-
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
