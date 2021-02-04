@@ -20,7 +20,7 @@ function sayHello(name){
  * console.log 'helloMessage' to check your work
  */
 
-var HelloMessage = sayHello("Victor")
+var HelloMessage = sayHello("Victor");
 
 /**
  * TODO:
@@ -60,8 +60,9 @@ function isTwo(num){
     return num === 2
 }
 
-isTwo("random")
-console.log(isTwo(random))
+isTwo("random");
+
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -108,7 +109,6 @@ alert(calculateTip(billTip, billTotal) + "$ Is the Tip amount");
 function applyDiscount(price, discount) {
     return price * discount
 }
-var originalPrice = 100;
-var discountPercent = .5;
+
 
 
