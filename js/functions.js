@@ -88,7 +88,9 @@ function calculateTip(tip, amount){
  */
 
 var billTotal = prompt("Your total is ");
+
 var billTip = prompt("What percentage would you like to tip?");
+
 alert(calculateTip(billTip, billTotal) + "$ Is the Tip amount");
 
 /**
@@ -109,6 +111,3 @@ alert(calculateTip(billTip, billTotal) + "$ Is the Tip amount");
 function applyDiscount(price, discount) {
     return price * discount
 }
-
-
-
