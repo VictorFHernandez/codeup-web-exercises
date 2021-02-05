@@ -20,15 +20,26 @@
  * console.logging the function's return value
  */
 
+function analyzeColor(input) {
+    if (input === "red") {
+       return "Strawberries are " + input;
+   } else if (input === "blue") {
+       return "The sky is " + input;
+   } else {
+       return "I don't know anything about " + input;
+        }
+    }
+//the 3 resluts of the TODO exercise #1
 
-
-
+console.log(analyzeColor("red"));
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("cyan"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
+// - `randomColor`: contains a single random color value from the list
+// (this will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -37,17 +48,49 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+function differentColor() {
+    return randomColor
+}
+
+console.log(differentColor());
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
+switch(differentColor()) {
+    case "red":
+        console.log("red");
+        break;
+    case "blue":
+        console.log("blue");
+        break;
+    case "orange":
+        console.log("orange");
+        break;
+    case "yellow":
+        console.log("yellow");
+        break;
+    case "green":
+        console.log("green");
+        break;
+    case "indigo":
+        console.log("indigo");
+        break;
+    default:
+        console.log(differentColor());
+        break;
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+var favoriteColor = prompt("What's your favorite color?");
+   alert(analyzeColor(favoriteColor));
 
 /* ########################################################################## */
 
