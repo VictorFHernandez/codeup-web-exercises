@@ -29,11 +29,10 @@ function analyzeColor(input) {
        return "I don't know anything about " + input;
         }
     }
-//the 3 resluts of the TODO exercise #1
+
 
 console.log(analyzeColor("red"));
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("cyan"));
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -52,7 +51,7 @@ function differentColor() {
     return randomColor
 }
 
-console.log(differentColor());
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -61,25 +60,25 @@ console.log(differentColor());
 
 switch(differentColor()) {
     case "red":
-        console.log("red");
+        console.log(analyzeColor("red"));
         break;
     case "blue":
-        console.log("blue");
+        console.log(analyzeColor("blue"));
         break;
     case "orange":
-        console.log("orange");
+        console.log(analyzeColor("orange"));
         break;
     case "yellow":
-        console.log("yellow");
+        console.log(analyzeColor("yellow"));
         break;
     case "green":
-        console.log("green");
+        console.log(analyzeColor("green"));
         break;
     case "indigo":
-        console.log("indigo");
+        console.log(analyzeColor("indigo"));
         break;
     default:
-        console.log(differentColor());
+        console.log(analyzeColor());
         break;
 }
 /**
@@ -89,8 +88,8 @@ switch(differentColor()) {
  * function to show it to the user.
  */
 
-var favoriteColor = prompt("What's your favorite color?");
-   alert(analyzeColor(favoriteColor));
+// var favoriteColor = prompt("What's your favorite color?");
+//    alert(analyzeColor(favoriteColor));
 
 /* ########################################################################## */
 
@@ -114,6 +113,22 @@ var favoriteColor = prompt("What's your favorite color?");
  * return value.
  */
 
+function calculateTotal(luckyNum, amountTotal) {
+    if (luckyNum === 1){
+        return .10 * amountTotal;
+    } else if(luckyNum === 2){
+        return .25 * amountTotal;
+    } else if(luckyNum === 3){
+        return .35 * amountTotal;
+    } else if(luckyNum === 4){
+        return .5 * amountTotal;
+    } else if(luckyNum === 5){
+        return 1 * amountTotal;
+    } else {
+        return 0;
+    }
+}
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -122,7 +137,15 @@ var favoriteColor = prompt("What's your favorite color?");
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var usersTotalBill = Number(prompt("What was your total bill?"));
+
+var discountedBill = calculateTotal(luckyNumber, usersTotalBill);
+
+alert("Your lucky number is " + luckyNumber);
+alert("Your price before the discount was $" + usersTotalBill + " However with the discount you only have to pay $" + discountedBill + ".");
+
 
 /**
  * TODO:
@@ -140,3 +163,26 @@ var favoriteColor = prompt("What's your favorite color?");
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var userConfirmed = confirm("Would you like to enter a number?");
+
+if (userConfirmed) {
+
+    var usersNumber = Number(prompt("Give me a number."));
+    if (!isNaN(usersNumber)) {
+
+
+        if (usersNumber % 2 === 0) {
+            alert("Your number is even.")
+        } else {
+            alert("Your number is odd.")
+        }
+        alert("Your number plus 100 is " + (100 + usersNumber));
+
+        var positiveOrNegativeNumber = (usersNumber > 0) ? "possitive" : "negative"
+
+        alert("Your number is " + positiveOrNegativeNumber + ".");
+
+    } else {
+    }
+}
