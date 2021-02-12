@@ -10,10 +10,14 @@ function showMultiplicationTable(input){
 
 var random = Math.floor((Math.random() * 200) + 20);
 
-for(var i = 0; i < 10; ++i) {
+for(var i = 0; i < 10; i++) {
     if (random % 2 === 0) {
-        console.log(i + random + " is even");
+        console.log(random + " is even");
     } else {
-        console.log(i + random + " is odd");
+        console.log(random + " is odd");
     }
+}
+
+for(var q = 100; q >= 5; q-=5){
+    console.log(q);
 }
