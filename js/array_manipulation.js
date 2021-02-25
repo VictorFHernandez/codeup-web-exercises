@@ -127,7 +127,7 @@ var pies = [
 function bakedPies(array){
     return array.slice(array.length - 3);
 }
-
+console.log(arrays.slice(pies));
 
 // ============================= Reversing
 
