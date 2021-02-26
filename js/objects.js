@@ -12,8 +12,13 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "Victor",
+        lastName: "Hernandez",
+    }
 
-
+    console.log(person.firstName);
+    console.log(person.lastName);
 
 
 
@@ -27,9 +32,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    person.sayHello = function (){
+        return "Hello from " + person.firstName + " " + person.lastName + "!"
+    }
 
-
-
+    console.log(person.sayHello());
 
 
     /** TODO:
@@ -46,11 +53,24 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function (shopper){
+        if (shopper.amount > 200){
+            var discount = shopper.amount * .12;
+            var newTotal = shopper.amount - discount;
+            console.log(shopper.name + " you were going to spend " + shopper.amount + ", but your discount total is now $" + newTotal);
+        } else {
+            console.log(shopper.name + " you didn't get the discount :(");
+        }
+    })
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -65,13 +85,33 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [
+        {
+            title: "The Empire Strikes Back",
+            author: {
+                firstName: "James",
+                lastName: "Bond"
+            }
+        },
+        {
+            title: "Coco",
+            author: {
+                firstName: "Sonya",
+                lastName: "Blade"
+            }
+        },
+        {
+            title: "Scorpion King",
+            author: {
+                firstName: "Dwayne",
+                lastName: "Johnson"
+            }
+        }
+    ]
 
-
-
-
-
-
-
+    console.log(books[0]);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -98,7 +138,9 @@
      *      ...
      */
 
-
+    books.forEach(function (book, index){
+        showBookInfo(book, index);
+    })
 
 
 
@@ -112,5 +154,25 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+        function createBook(bookTitle, authorFirstName, authorLastName){
+            var newBook = {
+                title: bookTitle,
+                author: {
+                    firstName: authorFirstName,
+                    lastName: authorLastName
+                }
+            }
+            return newBook;
+        }
+
+    console.log(createBook("Scorpion King", "Dwayne", "Johnson"));
+
+        function showBookInfo(bookObject, bookNumber){
+            console.log("Book # " + (bookNumber + 1));
+            console.log("Title: " + bookObject.title);
+            console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+            console.log("---");
+
+        }
 
 })();
