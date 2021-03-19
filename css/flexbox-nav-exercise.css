@@ -22,37 +22,37 @@ header nav a {
 
 header nav a:hover {
     color:blue;
-    /*background-color: darkgrey;*/
+    background-color: darkgrey;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
+/*header nav ul {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
 
-header nav .nav-bar-logo {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-}
+/*header nav .nav-bar-logo {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
 
-header nav .nav-bar-logo li {
-    width: 100%;
-}
+/*header nav .nav-bar-logo li {*/
+/*    width: 100%;*/
+/*}*/
 
-header nav .nav-bar-logo a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    padding: .2em 0;
-}
+/*header nav .nav-bar-logo a {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    font-size: 3em;*/
+/*    padding: .2em 0;*/
+/*}*/
 
-ul:not(.nav-bar-logo) {
-    z-index: 100;
-}
+/*ul:not(.nav-bar-logo) {*/
+/*    z-index: 100;*/
+/*}*/
 
-p {
-    text-align: center;
-}
+/*p {*/
+/*    text-align: center;*/
+/*}*/
