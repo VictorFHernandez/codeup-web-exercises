@@ -1,6 +1,21 @@
 /*This is a stylesheet for my welcome page welcome.html */
 
-.fancy-header {
-    background-color: black;
-   color: yellowgreen;
+h1 {
+    text-align: center;
+    color: #007334;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #9b8600;
+
+}
+
+li {
+    list-style: -moz-lao;
+}
+
+table {
+    font-size: 35px;
+    padding: 10px
 }
