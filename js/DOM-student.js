@@ -10,15 +10,19 @@ console.log(hatSearch);
 
 var dFlexClass = document.getElementsByClassName("d-flex");
 
-console.log(dFlexClass);
+console.log(dFlexClass)
 
 // TODO: Finish my FOR loop to go through that variable containing our d-flex'ed items and console.log each individual one within the loop!
 
-// for(var i = 0; i < dFlexClass.length; i++){
-//     console.log(dFlexClass[i]);
+for(var i = 0; i < dFlexClass.length; i++){
+    console.log(dFlexClass[i]);
 }
 
 // TODO: Find all of our div elements and store them into a variable~! Console.log the variable to see the results within!
+
+var divElements = document.getElementsByName("div");
+
+console.log(divElements);
 
 // TODO: Now that we have a variable with all of the elements, can you tell me how many divs are in the HTML using that variable and a little Javascript? Hint: the variable looks and behaves a lot like an array, doesn't it? That helped us in our for loop's condition!
 
