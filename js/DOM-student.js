@@ -20,11 +20,13 @@ for(var i = 0; i < dFlexClass.length; i++){
 
 // TODO: Find all of our div elements and store them into a variable~! Console.log the variable to see the results within!
 
-var divElements = document.getElementsByName("div");
+var divElements = document.getElementsByTagName("div");
 
 console.log(divElements);
 
 // TODO: Now that we have a variable with all of the elements, can you tell me how many divs are in the HTML using that variable and a little Javascript? Hint: the variable looks and behaves a lot like an array, doesn't it? That helped us in our for loop's condition!
+
+console.log(divElements.length);
 
 
 // TODO BONUS (a): Write a function called locateDivs. When locateDivs is called, it should return a collection of the div elements found.
