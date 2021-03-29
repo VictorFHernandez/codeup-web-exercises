@@ -2,7 +2,8 @@
 
 // TODO: Find an element by the id of "hat-search". Store the result into a variable. Use a console log to check what is in your variable.
 
-
+var hatSearch = document.getElementById("hat-search")
+console.log(hatSearch);
 
 // TODO: Find all of our elements we made flex containers in Bootstrap! Locate the .d-flex class, store all of your results into a variable, and then console.log them.
 
