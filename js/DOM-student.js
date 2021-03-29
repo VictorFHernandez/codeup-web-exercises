@@ -2,17 +2,21 @@
 
 // TODO: Find an element by the id of "hat-search". Store the result into a variable. Use a console log to check what is in your variable.
 
-var hatSearch = document.getElementById("hat-search")
+var hatSearch = document.getElementById("hat-search");
+
 console.log(hatSearch);
 
 // TODO: Find all of our elements we made flex containers in Bootstrap! Locate the .d-flex class, store all of your results into a variable, and then console.log them.
 
+var dFlexClass = document.getElementsByClassName("d-flex");
 
+console.log(dFlexClass);
 
 // TODO: Finish my FOR loop to go through that variable containing our d-flex'ed items and console.log each individual one within the loop!
 
-// for(var ; i < .length; ++){
-// .. need to console.log some stuff!}
+// for(var i = 0; i < dFlexClass.length; i++){
+//     console.log(dFlexClass[i]);
+}
 
 // TODO: Find all of our div elements and store them into a variable~! Console.log the variable to see the results within!
 
