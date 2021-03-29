@@ -31,7 +31,15 @@ console.log(divElements.length);
 
 // TODO BONUS (a): Write a function called locateDivs. When locateDivs is called, it should return a collection of the div elements found.
 
+function locateDivs() {
+    return document.getElementsByTagName("div");
+}
+
 // TODO BONUS (b): Write a function called locateElements. locateElements should take in one parameter, the element to be searched for, and then return a collection of those elements. If no elements by that name were found, return false.
+
+function locateElements(element) {
+    return document.getElementsByTagName(element);
+}
 
 // ii. a step further: accessing / looking into what we've located deeper
 
