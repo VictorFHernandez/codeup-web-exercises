@@ -2,7 +2,7 @@
 (function() {
     $('h1').css('background-color', 'rebeccapurple')
     $('h1').click(function() {
-        $(this).css('background-color', 'yellow')
+        $(this).css('background-color', 'yellow');
     });
 
     $('p').dblclick(function() {
@@ -16,8 +16,4 @@
             $(this).css('background-color', '#FFF');
         }
     );
-
-
-
-
 })()
