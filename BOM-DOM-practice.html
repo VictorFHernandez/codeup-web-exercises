@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM/BOM Workshop</title>
+
+    <style>
+        #box {
+            width: 250px;
+            height: 250px;
+            border: 1px solid red;
+        }
+
+        .button {
+            padding: 1.5em;
+            margin-top: 1em;
+        }
+
+        .toggleClass1 {
+            background-color: rebeccapurple;
+        }
+
+        .toggleClass2 {
+            background-color: cornflowerblue;
+        }
+
+        #boxInfo {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<button class="button" id="changeBoxSize">Double the Box!</button>
+<button class="button" id="toggleClass">Toggle a class!</button>
+<div id="boxInfo"></div>
+
+<input id="input">
+<button id="inputBtn">Tell me your name!</button>
+<div id="helloUser">Hola, ni hao, guten tag, hello, bonjour to you, <span id="userName">user</span>!</div>
+
+<!--jQuery cdn-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!--Custom JS-->
+<script src="BOM-DOM-practice.js"></script>
+
+</body>
+</html>
