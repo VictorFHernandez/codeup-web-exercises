@@ -32,10 +32,10 @@
        console.log(data);
    });
 
-    console.log(Ajax);
 
     // TODO: Take the data from inventory.json and append it to the products table
 
+   $.ajax(Ajax).append("#insertProducts");
 
 
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
