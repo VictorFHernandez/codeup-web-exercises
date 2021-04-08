@@ -28,7 +28,9 @@
    var Ajax = $.ajax("data/inventory.json.txt", {
         method: "GET",
         data: "data/inventory.json.txt"
-    })
+    }).done(function(data){
+       console.log(data);
+   });
 
     console.log(Ajax);
 
