@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' style='width: 600px; height: 400px;'></div>
 
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
@@ -39,11 +39,10 @@
         .addTo(map);
 
     var volarePopup = new mapboxgl.Popup()
-        .setHTML("<h6>Volare Pizza</h6>")
+        .setHTML("<h6>Volare's Pizza</h6>")
         .setLngLat([-98.49163635640556, 29.46755207949902])
         .addTo(map);
     volareMarker.setPopup(volarePopup);
-
 
 	var cerronisMarker =  new mapboxgl.Marker({color: "orange"})
         .setLngLat([-98.45247381830434, 29.486173349761124])
@@ -54,11 +53,6 @@
         .setLngLat([-98.45247381830434, 29.486173349761124])
         .addTo(map);
     cerronisMarker.setPopup(cerronisPopup);
-
-
-
-
-
 
 </script>
 </body>
