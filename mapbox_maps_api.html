@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mapbox-maps-exercise</title>
+	<title>Mapbox-maps-exercise(Favorite Pizza Places)</title>
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 </head>
@@ -20,17 +20,45 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-98.4861, 29.4252],
-        zoom: 8
+        center: [-98.45891, 29.489714],
+        zoom: 11
     });
 
-	var JuliansMarker =  new mapboxgl.Marker({color: "rebeccapurple"})
+	var juliansMarker =  new mapboxgl.Marker({color: "rebeccapurple"})
         .setLngLat([-98.45891, 29.489714])
         .addTo(map);
-    var marcoPopup= new mapboxgl.Popup()
+
+	var juliansPopup = new mapboxgl.Popup()
         .setHTML("<h6>Julian's Pizza</h6>")
         .setLngLat([-98.45891, 29.489714])
         .addTo(map);
+	juliansMarker.setPopup(juliansPopup)
+
+    var volareMarker =  new mapboxgl.Marker({color: "green"})
+        .setLngLat([-98.49163635640556, 29.46755207949902])
+        .addTo(map);
+
+    var volarePopup = new mapboxgl.Popup()
+        .setHTML("<h6>Volare Pizza</h6>")
+        .setLngLat([-98.49163635640556, 29.46755207949902])
+        .addTo(map);
+    volareMarker.setPopup(volarePopup);
+
+
+	var cerronisMarker =  new mapboxgl.Marker({color: "orange"})
+        .setLngLat([-98.45247381830434, 29.486173349761124])
+        .addTo(map);
+
+    var cerronisPopup = new mapboxgl.Popup()
+        .setHTML("<h6>Cerroni's Purple Garlic Pizza</h6>")
+        .setLngLat([-98.45247381830434, 29.486173349761124])
+        .addTo(map);
+    cerronisMarker.setPopup(cerronisPopup);
+
+
+
+
+
 
 </script>
 </body>
