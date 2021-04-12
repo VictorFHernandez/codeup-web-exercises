@@ -1,5 +1,5 @@
 "use strict";
-console.log("this is it");
+console.log("geocode is linked");
 
 /***
  * geocode is a method to search for coordinates based on a physical address and return
