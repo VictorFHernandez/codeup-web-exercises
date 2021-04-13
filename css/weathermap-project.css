@@ -1,21 +1,56 @@
-#h1 {
-    background-color: cornflowerblue;
+#header {
+    background-color: dodgerblue;
     color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.container {
+.header {
+    margin-bottom: 0;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+
+#container {
     display: flex;
     justify-content: flex-start;
     text-align: center;
 }
 
+.searchBar {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-color: dodgerblue;
+    border-radius: 5px;
+
+}
+
 .button {
-    background-color: cornflowerblue;
+    background-color: dodgerblue;
     color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#weatherContainer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .weatherContainers {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
+    height: 260px;
+    width: 100%;
+    border: 1px solid crimson;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-style: italic;
 }
