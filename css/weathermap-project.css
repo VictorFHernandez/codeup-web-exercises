@@ -1,0 +1,21 @@
+#h1 {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.button {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+.weatherContainers {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}

@@ -3,13 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="css/weathermap-project.css">
 	<title>Weather Map Project</title>
 </head>
 <body>
+<h1 id="h1">Weather App</h1>
+<div class="container">
+	<h4>Place</h4>
+	<input type="search" placeholder="">
+	<button class="button">find</button>
+</div>
+<div>
+<div class="weatherContainers">13-04-2021</div>
+<div class="weatherContainers">14-04-2021</div>
+<div class="weatherContainers">15-04-2021</div>
+<div class="weatherContainers">16-04-2021</div>
+<div class="weatherContainers">17-04-2021</div>
+</div>
+
+<div id='map' style='width: 100%; height: 400px;'></div>
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -24,13 +45,22 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script>
 
-	$.get("http://api.openweathermap.org/data/2.5/forecast", {
+	var fiveDayForecast = $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: weatherkey,
             q: "San Antonio, US",
             units: "imperial"
         }).done(function (results) {
             console.log("5 day forecast", results);
         });
+
+    mapboxgl.accessToken = mapBoxToken
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.45891, 29.489714],
+        zoom: 9
+    });
 
 
 
