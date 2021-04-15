@@ -22,13 +22,51 @@
 		<input class="searchBar" type="search" placeholder="Where To?">
 		<button class="button">find</button>
 	</div>
-	<div id="weatherContainer">
-		<div class="weatherContainers"><em>13-04-2021
-		</em><hr></div>
-		<div class="weatherContainers"><em>14-04-2021</em><hr></div>
-		<div class="weatherContainers"><em>15-04-2021</em><hr></div>
-		<div class="weatherContainers"><em>16-04-2021</em><hr></div>
-		<div class="weatherContainers"><em>17-04-2021</em><hr></div>
+
+
+
+<div id="weatherContainer">
+
+		<div class="weatherContainers">
+			<p id="firstCubeDate"></p>
+			<p id="firstCubeTemperature"></p>
+			<p id="firstCubeDescription"></p>
+			<p id="firstCubeHumidity"></p>
+			<p id="firstCubeWind"></p>
+			<p id="firstCubePressure"></p>
+		</div>
+		<div class="weatherContainers">
+			<p id="secondCubeDate"></p>
+			<p id="secondCubeTemperature"></p>
+			<p id="secondCubeDescription"></p>
+			<p id="secondCubeHumidity"></p>
+			<p id="secondCubeWind"></p>
+			<p id="secondCubePressure"></p>
+		</div>
+		<div class="weatherContainers">
+			<p id="thirdCubeDate"></p>
+			<p id="thirdCubeTemperature"></p>
+			<p id="thirdCubeDescription"></p>
+			<p id="thirdCubeHumidity"></p>
+			<p id="thirdCubeWind"></p>
+			<p id="thirdCubePressure"></p>
+		</div>
+		<div class="weatherContainers">
+			<p id="fourthCubeDate"></p>
+			<p id="fourthCubeTemperature"></p>
+			<p id="fourthCubeDescription"></p>
+			<p id="fourthCubeHumidity"></p>
+			<p id="fourthCubeWind"></p>
+			<p id="fourthCubePressure"></p>
+		</div>
+		<div class="weatherContainers">
+			<p id="fifthCubeDate"></p>
+			<p id="fifthCubeTemperature"></p>
+			<p id="fifthCubeDescription"></p>
+			<p id="fifthCubeHumidity"></p>
+			<p id="fifthCubeWind"></p>
+			<p id="fifthCubePressure"></p>
+		</div>
 	</div>
 
 <div id='map' style='width: 100%; height: 400px;'></div>
@@ -59,7 +97,47 @@
             units: "imperial"
         }).done(function (results) {
             console.log("5 day forecast", results);
-        $('#currentCity').html("Current City: " + results.city.name);
+        $("#currentCity").html("Current City: " + results.city.name);
+        $('#firstCubeDate').html(results.list[0].dt_txt + "<hr>");
+        $('#firstCubeTemperature').html(results.list[0].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        $('#firstCubeDescription').html("Description: " + results.list[0].weather[0].description);
+        $('#firstCubeHumidity').html("Humidity: " + results.list[0].main.humidity);
+        $('#firstCubeWind').html("Wind: " + results.list[0].wind.speed);
+        $('#firstCubePressure').html("Pressure: " + results.list[0].main.pressure);
+
+        $('#secondCubeDate').html(results.list[8].dt_txt + "<hr>");
+        $('#secondCubeTemperature').html(results.list[8].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        $('#secondCubeDescription').html("Description: " + results.list[8].weather[0].description);
+        $('#secondCubeHumidity').html("Humidity: " + results.list[8].main.humidity);
+        $('#secondCubeWind').html("Wind: " + results.list[8].wind.speed);
+        $('#secondCubePressure').html("Pressure: " + results.list[8].main.pressure);
+
+        $('#thirdCubeDate').html(results.list[16].dt_txt + "<hr>");
+        $('#thirdCubeTemperature').html(results.list[16].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        $('#thirdCubeDescription').html("Description: " + results.list[16].weather[0].description);
+        $('#thirdCubeHumidity').html("Humidity: " + results.list[16].main.humidity);
+        $('#thirdCubeWind').html("Wind: " + results.list[16].wind.speed);
+        $('#thirdCubePressure').html("Pressure: " + results.list[16].main.pressure);
+
+        $('#fourthCubeDate').html(results.list[24].dt_txt + "<hr>");
+        $('#fourthCubeTemperature').html(results.list[24].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        $('#fourthCubeDescription').html("Description: " + results.list[24].weather[0].description);
+        $('#fourthCubeHumidity').html("Humidity: " + results.list[0].main.humidity);
+        $('#fourthCubeWind').html("Wind: " + results.list[24].wind.speed);
+        $('#fourthCubePressure').html("Pressure: " + results.list[24].main.pressure);
+
+        $('#fifthCubeDate').html(results.list[32].dt_txt + "<hr>");
+        $('#fifthCubeTemperature').html(results.list[32].main.temp + "°F / " + results.list[0].main.temp + "°F");
+        $('#fifthCubeDescription').html("Description: " + results.list[32].weather[0].description);
+        $('#fifthCubeHumidity').html("Humidity: " + results.list[32].main.humidity);
+        $('#fifthCubeWind').html("Wind: " + results.list[32].wind.speed);
+        $('#fifthCubePressure').html("Pressure: " + results.list[32].main.pressure);
+
+
+
+
+
+
         });
 
 
