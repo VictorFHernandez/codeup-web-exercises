@@ -49,6 +49,15 @@
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
 
+const objectsArray = [{name: "Victor F Hernandez I", age: 97},{name:"Victor F Hernandez II", age: 56
+},{ame:"Victor F Hernandez III", age: 27}];
+
+const totalAge = objectsArray.reduce((total, person) => {
+    return total + person.age;
+}, 0);
+
+console.log(totalAge);
+
 
 </script>
 </body>
