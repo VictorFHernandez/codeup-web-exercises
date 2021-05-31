@@ -41,7 +41,7 @@ console.log(sayHola(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+var random = Math.floor((Math.random() * 3));
 
 /**
  * TODO:
@@ -65,7 +65,7 @@ function isTwo(number){
     return number === 2;
 }
 
-console.log(isTwo(Math.floor(Math.random()*3)));
+console.log(isTwo(Math.floor(Math.random()*3)+1));
 
 /**
  * TODO:
@@ -83,7 +83,7 @@ function calculateTip(tipPercent, totalBill){
     return tipPercent * totalBill;
 }
 
-console.log(calculateTip(0.20, 100) + "$ is the tip");
+console.log(calculateTip(0.20, 100));
 
 /**
  * TODO:
@@ -91,6 +91,12 @@ console.log(calculateTip(0.20, 100) + "$ is the tip");
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+var billTotal = prompt("Your total is ");
+
+var billTip = prompt("What percentage would you like to tip?");
+
+alert(calculateTip(billTip, billTotal) + "$ Is the Tip amount");
 
 /**
  * TODO:
@@ -106,3 +112,10 @@ console.log(calculateTip(0.20, 100) + "$ is the tip");
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(price, discount) {
+    return price - (price * discount);
+}
+
+console.log(applyDiscount(100, .2));
+console.log(applyDiscount(45.99, 0.12));

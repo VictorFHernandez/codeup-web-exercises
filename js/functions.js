@@ -110,5 +110,5 @@ alert(calculateTip(billTip, billTotal) + "$ Is the Tip amount");
  */
 
 function applyDiscount(price, discount) {
-    return price * discount
+    return price - (price * discount);
 }
