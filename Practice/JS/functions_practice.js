@@ -79,7 +79,11 @@ console.log(isTwo(Math.floor(Math.random()*3)));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tipPercent, totalBill){
+    return tipPercent * totalBill;
+}
 
+console.log(calculateTip(0.20, 100) + "$ is the tip");
 
 /**
  * TODO:
